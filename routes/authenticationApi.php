@@ -79,7 +79,7 @@ class authenticationApi extends ApiController
             },
             'callback' => function () {
                 $res = MSNClient::get_status_dashboard();
-                return json_decode($res['body']);
+                return $res ? json_decode($res['body']) : null;
             }
         ]);
     }

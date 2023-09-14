@@ -14,7 +14,7 @@ class MSNClient
 
     static function filter_empty_notification($item)
     {
-        $signal_arr = ['Signal_423', 'Signal_424', 'Signal_425', 'Signal_426', 'Signal_427', 'Signal_454', 'Signal_508', 'Signal_482', 'Signal_428', 'Signal_429', 'Signal_430', 'Signal_431', 'Signal_432', 'Signal_483', 'Signal_433', 'Signal_455', 'Signal_456', 'Signal_474', 'Signal_475', 'Signal_489'];
+        $signal_arr = ['Signal_423', 'Signal_424', 'Signal_425', 'Signal_426', 'Signal_427', 'Signal_454', 'Signal_508', 'Signal_482', 'Signal_428', 'Signal_429', 'Signal_430', 'Signal_431', 'Signal_432', 'Signal_483', 'Signal_433', 'Signal_455', 'Signal_456', 'Signal_474', 'Signal_475', 'Signal_489', 'Signal_582', 'Signal_583'];
         return isset($item['notificationTypeId']) ? array_search($item['notificationTypeId'], $signal_arr) : false;
     }
 
@@ -146,7 +146,10 @@ class MSNClient
         };
         
         $final_result = array_map(function($item) use ($result_mapping) {
-            return array(key($item) => array_merge((array)$result_mapping[$item[key($item)]], ['post_id' => key($item)]) );
+            $post_id = key($item);
+            $msn_id = $item[$post_id];
+            $is_msn_id_exists = !!$msn_id && array_key_exists($msn_id, $result_mapping);
+            return array($post_id => array_merge($is_msn_id_exists ? (array)$result_mapping[$msn_id] : [], ['post_id' => $post_id]) );
         }, $msn_id_mapping);
 
         return $final_result;
@@ -281,11 +284,22 @@ class MSNClient
     {
         $profile = json_decode(Options::get_profile(), true);
         $partnerId = $profile['partnerId'];
+        $cid = Options::get_CID();
+        if (!$profile || !$partnerId || !$cid) {
+            return null;
+        }
         $response = static::BaseRequest(
-            "account/statusdashboard?accountId=" . Options::get_CID() . "&partnerId="
+            "account/statusdashboard?accountId=" . $cid . "&partnerId="
                 . $partnerId,
             ['method' => 'GET']
         );
+        if (!$response["body"]) {
+            LogService::add_log(LoggerTelemetryType::Log, LoggerFeatureSet::PartnerOnboarding, "StatusDashboardError", array(
+                'partnerId' => $partnerId,
+                'accountId' => $cid,
+                'response' => json_encode($response)
+            ));
+        }
         return $response;
     }
 

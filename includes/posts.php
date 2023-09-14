@@ -16,6 +16,13 @@ class Posts
 
     function __construct()
     {
+        if (!TokenService::get_token()) {
+            return;
+        }
+        $accountSettings = json_decode(Options::get_profile());
+        if ($accountSettings -> partnerStatus === 3) {
+            return;
+        }
         postApi::register();
 
         add_filter('manage_post_posts_columns', array($this, 'manage_posts_columns'));
@@ -37,9 +44,7 @@ class Posts
     {
         switch ($column) {
             case 'msn-status':
-                if (!TokenService::get_token()) {
-                    return;
-                }
+                
                 $post = get_post($post_id);
                 $msn_id = get_post_meta($post_id, "msn_id", true);
 ?>
@@ -116,6 +121,7 @@ class Posts
 
         wp_register_style('warnings', false);
         wp_enqueue_style('warnings');
+        
         $accountSettings = json_decode(Options::get_profile());
         wp_localize_script(
             'post-status',

@@ -66,9 +66,7 @@ class postApi extends ApiController
                         'msn_id' => $value['id'] ?? null,
                         'msn_status' => $value['status'] ?? null,
                         'postId' => key($item),
-                        'validation' => array_map(function ($failure) {
-                            return $failure->failureReason;
-                        }, $value['failedTargets'] ?? []),
+                        'expirationDateTime' => $value['expirationDateTime'] ?? null,
                         'appealSignal' => $value['appealSignal'] ?? null
                     ];
                 }, MSNClient::get_msn_publish_status($post_ids));

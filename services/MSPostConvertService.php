@@ -28,6 +28,8 @@ class MSPostConvertService
             $msn_id = Options::get_msn_article_id_prefix().(string)($post->ID);
         }
         
+        $publishedDateTime = new \DateTime;
+        $publishedDateTime->setTimestamp(get_post_time('U', false, $post->ID));
         $MSPost = [
             "id" => $msn_id,
             "link" => $post->guid,
@@ -49,7 +51,8 @@ class MSPostConvertService
                 "wpPostId" => $post->ID,
                 "wpVersion" => MSPH_WP_VERSION,
                 "pluginVersion" => MSPH_PLUGIN_VERSION
-            ]
+            ],
+            "displayPublishedDateTime" => $publishedDateTime->format('Y-m-d\\TH:i:sP')
         ];
         
         return $MSPost;

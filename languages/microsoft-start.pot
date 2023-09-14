@@ -2,16 +2,16 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Microsoft Start 2.7.2\n"
+"Project-Id-Version: Microsoft Start 2.7.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/__translate_cache\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-02-07T02:53:31+00:00\n"
+"POT-Creation-Date: 2023-08-18T07:52:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.6.0\n"
 
 #. Plugin Name of the plugin
 #. translators: Name of plugin, appears in menu bar and edit bar, or in connection page when user tries to connect
@@ -37,7 +37,7 @@ msgid "https://www.microsoft.com/"
 msgstr ""
 
 #. translators: table header for a column of publishing status of articles
-#: includes/posts.php:32
+#: includes/posts.php:39
 msgid "Microsoft Start publish status"
 msgstr ""
 
@@ -51,38 +51,38 @@ msgid "Partner Hub"
 msgstr ""
 
 #. translators: Notification of update plugin
-#: services/MSNClient.php:191
+#: services/MSNClient.php:194
 msgid "A new version of Microsoft Start is available."
 msgstr ""
 
 #. translators: Update button in banner
-#: services/MSNClient.php:192
+#: services/MSNClient.php:195
 msgid "Update Now"
 msgstr ""
 
 #. translators: Notification of publish post
-#: services/MSNClient.php:216
+#: services/MSNClient.php:219
 msgid "Some of your posts haven't been submitted to Microsoft Start yet."
 msgstr ""
 
 #. translators: Batch submit button
-#: services/MSNClient.php:217
+#: services/MSNClient.php:220
 #: assets/js/dashboard.js:1
 msgid "Submit all"
 msgstr ""
 
 #. translators: Submit button in banner
-#: services/MSNClient.php:217
+#: services/MSNClient.php:220
 msgid "Edit and submit one by one"
 msgstr ""
 
 #. translators: Notification of batch submit completed
-#: services/MSNClient.php:229
+#: services/MSNClient.php:232
 msgid "Batch submission completed!"
 msgstr ""
 
 #. translators: View details button in banner
-#: services/MSNClient.php:230
+#: services/MSNClient.php:233
 msgid "View details"
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr ""
 #. translators: Detail display info about notification when brand is under review
 #: assets/js/callback.js:1
 #: assets/js/dashboard.js:1
-msgid "Your brand is under review.{delimiter}Your brand profile is under review. This may take up to an hour."
+msgid "Your brand is under review.{delimiter}Your brand profile is under review. This may take up to 5 business days."
 msgstr ""
 
 #. translators: Detail display info about notification when account has not enable reader support.
@@ -181,6 +181,12 @@ msgstr ""
 msgid "Monthly Revenue Statement Available{delimiter}Your partner revenue statement is available to download. Please note that only partner-level admins can access."
 msgstr ""
 
+#. translators: Detail display info about notification when partner's trade screening meet "data issue".
+#: assets/js/callback.js:1
+#: assets/js/dashboard.js:1
+msgid "Account didn’t pass review:{delimiter} There seems to be an error in the information submitted. To proceed with next steps, please check the data submitted."
+msgstr ""
+
 #. translators: Notification button
 #: assets/js/callback.js:1
 #: assets/js/dashboard.js:1
@@ -222,6 +228,12 @@ msgstr ""
 #: assets/js/callback.js:1
 #: assets/js/dashboard.js:1
 msgid "View"
+msgstr ""
+
+#. translators: Contact button
+#: assets/js/callback.js:1
+#: assets/js/dashboard.js:1
+msgid "Contact support"
 msgstr ""
 
 #. translators: The onboarding task's status text, keep it short.
@@ -290,6 +302,12 @@ msgstr ""
 msgid "Additional business information is needed to continue."
 msgstr ""
 
+#. translators: The info card's content, telling partner that his/her brand profile didn't pass vetting and have data issue.
+#: assets/js/callback.js:1
+#: assets/js/dashboard.js:1
+msgid "There seems to be an error in the information submitted. To proceed with next steps, please check the data submitted."
+msgstr ""
+
 #. translators: The info card's title, telling partner that his/her brand profile has passed our review.
 #: assets/js/callback.js:1
 #: assets/js/dashboard.js:1
@@ -311,7 +329,7 @@ msgstr ""
 #. translators: The info card's content, telling partner that his/her brand profile is under review.
 #: assets/js/callback.js:1
 #: assets/js/dashboard.js:1
-msgid "This can take up to an hour to complete."
+msgid "This can take up to 5 business days to complete."
 msgstr ""
 
 #. translators: The info card's title, telling partner that his/her brand profile didn't pass review.
@@ -696,6 +714,16 @@ msgstr ""
 msgid "Informational"
 msgstr ""
 
+#. translators: Text on join button before click
+#: assets/js/dashboard.js:1
+msgid "Join now"
+msgstr ""
+
+#. translators: Text on button after click
+#: assets/js/dashboard.js:1
+msgid "Connecting"
+msgstr ""
+
 #. translators: Title of text inviting users to join
 #: assets/js/dashboard.js:1
 msgid "Grow your audience with Microsoft—and get paid"
@@ -706,14 +734,9 @@ msgstr ""
 msgid "You've been invited to join Microsoft Start Partner Hub. With this new program, you can make your WordPress posts available to the millions of people who use Microsoft Start."
 msgstr ""
 
-#. translators: Text on join button before click
+#. translators: Tooltip text for sign in hint under Edge browser
 #: assets/js/dashboard.js:1
-msgid "Join now"
-msgstr ""
-
-#. translators: Text on button after click
-#: assets/js/dashboard.js:1
-msgid "Connecting"
+msgid "Sign in with the same account you use for Edge"
 msgstr ""
 
 #. translators: Card title of onboarding transparency
@@ -1128,6 +1151,16 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#. translators: Account not approved page title
+#: assets/js/dashboard.js:1
+msgid "Your account was not approved"
+msgstr ""
+
+#. translators: Account not approved page desp
+#: assets/js/dashboard.js:1
+msgid "Transactions for this account is not allowed. Please contact ({email}) for support or connect to a brand with an available partner account."
+msgstr ""
+
 #. translators: categories
 #: assets/js/dashboard.js:1
 #: assets/js/editorSidebar.js:1
@@ -1309,6 +1342,18 @@ msgstr ""
 msgid "Articles must have at least 450 characters."
 msgstr ""
 
+#. translators: one of reject content published reason message.
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Content contains duplicate images."
+msgstr ""
+
+#. translators: one of reason messages for content rejection
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Content contains duplicate videos."
+msgstr ""
+
 #. translators: one of reason messages for content rejection
 #: assets/js/editorSidebar.js:1
 #: assets/js/status.js:1
@@ -1355,6 +1400,12 @@ msgstr ""
 #: assets/js/editorSidebar.js:1
 #: assets/js/status.js:1
 msgid "Title or article text is missing."
+msgstr ""
+
+#. translators: one of reason messages for content rejection, $1 and $2 will be replaced by examples
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Dates must be listed in the following formats: “$1”, “$2”."
 msgstr ""
 
 #. translators: one of reason messages for content rejection
@@ -1420,7 +1471,31 @@ msgstr ""
 #. translators: one of reason messages for content rejection
 #: assets/js/editorSidebar.js:1
 #: assets/js/status.js:1
-msgid "Unable to publish. Try again later."
+msgid "Unable to publish. Contact us for help."
+msgstr ""
+
+#. translators: one of reject content published reason message.
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Appeal request has timed out. Resubmit or contact us for help."
+msgstr ""
+
+#. translators: one of reject content published reason message.
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Moderation request timed out. Resubmit or contact us for help."
+msgstr ""
+
+#. translators: one of reason messages for content rejection
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Moderation service error. Contact us for help."
+msgstr ""
+
+#. translators: one of reason messages for content rejection
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Video processing error. Contact us for help."
 msgstr ""
 
 #. translators: one of reason messages for content rejection
@@ -1441,10 +1516,10 @@ msgstr ""
 msgid "Canonical URL is broken."
 msgstr ""
 
-#. translators: one of reason messages for content rejection
+#. translators: one of reject content published reason message.
 #: assets/js/editorSidebar.js:1
 #: assets/js/status.js:1
-msgid "At least one hyperlink is broken."
+msgid "Content contains broken links."
 msgstr ""
 
 #. translators: one of reason messages for content rejection
@@ -1457,6 +1532,12 @@ msgstr ""
 #: assets/js/editorSidebar.js:1
 #: assets/js/status.js:1
 msgid "At least one slide is missing an image."
+msgstr ""
+
+#. translators: one of reason messages for content rejection
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Social media embedded in this content contains profanity."
 msgstr ""
 
 #. translators: one of reason messages for content rejection
@@ -1499,6 +1580,12 @@ msgstr ""
 #: assets/js/editorSidebar.js:1
 #: assets/js/status.js:1
 msgid "At least one video contains graphic violence, nudity, or sexual content."
+msgstr ""
+
+#. translators: one of reject content published reason message.
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Video processing has timed out. Resubmit or contact us for help."
 msgstr ""
 
 #. translators: post status
@@ -1559,6 +1646,18 @@ msgstr ""
 #: assets/js/editorSidebar.js:1
 #: assets/js/status.js:1
 msgid "To use Microsoft Start Partner Hub, connect your WordPress website"
+msgstr ""
+
+#. translators: Account not approved description in editor sidebar
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "Your account was not approved. Transactions for this account is not allowed."
+msgstr ""
+
+#. translators: The info card's content, telling partner that his/her brand profile didn't pass vetting and have data issue in post editor sidebar.
+#: assets/js/editorSidebar.js:1
+#: assets/js/status.js:1
+msgid "There seems to be an error in the information submitted. To proceed with next steps, please check the data submitted or contact ({email}) for support."
 msgstr ""
 
 #. translators: explanation text for users not approved yet
@@ -1729,7 +1828,27 @@ msgstr ""
 msgid "Publish"
 msgstr ""
 
+#. translators: Hint text for expired content. $1 will be replaced by expired days
+#: assets/js/status.js:1
+msgid "Content automatically expires $1 days after last update"
+msgstr ""
+
+#. translators: Status text of content which will be expired in 1 day
+#: assets/js/status.js:1
+msgid "Expires in 1 day"
+msgstr ""
+
+#. translators: Status text of content which will be expired in several days, $1 will be replaced by the number of days
+#: assets/js/status.js:1
+msgid "Expires in $1 days"
+msgstr ""
+
 #. translators: status to be displayed when we are fetching the real status
 #: assets/js/status.js:1
 msgid "Loading..."
+msgstr ""
+
+#. translators: Status text of expired content
+#: assets/js/status.js:1
+msgid "Content expired"
 msgstr ""

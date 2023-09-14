@@ -2,8 +2,8 @@
 Tags: Microsoft, Microsoft Start
 Requires at least: 5.4
 Requires PHP: 7.3
-Stable tag: 2.7.4
-Tested up to: 6.2
+Stable tag: 2.7.12
+Tested up to: 6.3
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Contributors: Microsoft
@@ -48,6 +48,12 @@ Data Collection. The software may collect information about you and your use of 
 For more information be sure to check out the [Microsoft Start Help Center](https://helpcenter.microsoftstart.com)
 
 == Changelog ==
+
+= 2.7.11 =
+* Provide a clear indication that the content has expired in MSPH or will expire within 90 days.
+
+= 2.7.5 =
+* Support new validation rules in post rejection details.
 
 = 2.7 =
 * Provide a built-in help center that can provide answers to frequently asked questions.
