@@ -1,6 +1,7 @@
 {
   "name": "microsoft/news",
-  "description": "",
+  "type": "wordpress-plugin",
+  "description": "Microsoft Start Plugin",
   "license": "",
   "keywords": [],
   "authors": [],
